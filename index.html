@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Tables</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <form id="tableForm">
+      <h2>Informações de Celebração</h2>
+      <div class="form-group">
+        <label for="dataDate">Data, Hora e Descrição:</label>
+        <input
+          type="text"
+          id="dataDate"
+          placeholder="11/02 - 2º DOMINGO - 7h30min"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="responsavel">Responsável:</label>
+        <input type="text" id="responsavel" placeholder="Nome" required />
+      </div>
+      <div class="form-group">
+        <label for="comentario">Comentário:</label>
+        <input type="text" id="comentario" placeholder="Nome" required />
+      </div>
+      <div class="form-group">
+        <label for="primeiraLeitura">Primeira Leitura:</label>
+        <input type="text" id="primeiraLeitura" placeholder="Nome" required />
+      </div>
+      <div class="form-group">
+        <label for="segundaLeitura">Segunda Leitura:</label>
+        <input type="text" id="segundaLeitura" placeholder="Nome" required />
+      </div>
+      <div class="form-group">
+        <label for="preces">Preces:</label>
+        <input type="text" id="preces" placeholder="Nome" required />
+      </div>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <div id="tablesContainer"></div>
+
+    <button id="printPDF">Salvar em PDF</button>
+    <button id="clearTables">Limpar Tabela</button>
+  </body>
+</html>

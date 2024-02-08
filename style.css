@@ -1,0 +1,75 @@
+#tablesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 48%; /* Adjust based on your layout preference */
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.tableBlock {
+  border: 1px solid #ddd;
+  padding: 8px; /* Reduzido de 10px para 8px */
+  margin-bottom: 15px; /* Reduzido de 20px para 15px */
+  width: 80%; /* Mantenha ou ajuste conforme necessário */
+  font-size: 1.2rem; /* Tamanho da fonte reduzido */
+}
+
+.tableBlock .date {
+  font-weight: bold;
+  margin-bottom: 8px; /* Reduzido de 10px */
+  display: block;
+}
+
+.item {
+  margin-bottom: 4px; /* Reduzido de 5px */
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 2px; /* Espaçamento adicional pode ser ajustado se necessário */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
