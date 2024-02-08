@@ -67,6 +67,7 @@ function printPDF() {
 
   // Inicia na posição y = 10, que será atualizada ao adicionar texto
   let y = 10;
+  let count = 0; // Contador para as tabelas
 
   // Adiciona o título
   doc.text("Celebrações", 10, y);
@@ -77,6 +78,13 @@ function printPDF() {
 
   // Itera sobre cada bloco de tabela
   tableBlocks.forEach((block) => {
+    if (count >= 5) {
+      // Após 5 tabelas, adicione uma nova página e resete o contador
+      doc.addPage();
+      y = 10; // Reseta a posição y para o topo da nova página
+      count = 0; // Reseta o contador de tabelas
+    }
+
     const date = block.querySelector(".date").textContent;
     const items = block.querySelectorAll(".item");
 
@@ -99,6 +107,7 @@ function printPDF() {
     });
 
     y += 10; // Espaço extra antes do próximo bloco de tabela
+    count++; // Incrementa o contador de tabelas
   });
 
   // Verifica se o conteúdo excede o limite da página e, caso positivo, adiciona uma nova página
